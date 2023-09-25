@@ -1,0 +1,16 @@
+﻿@model List<WebApplication1.Models.Fattura> 
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<ul>
+    @foreach(WebApplication1.Models.Fattura f in Model)
+            {
+                <li>
+                    <p>Data fattura: @f.Datafattura.ToShortDateString()</p>
+                    <strong>@f.Nomecliente</strong>
+                    <p> @f.Importo.ToString("C2")</p>
+                </li>
+            }
+</ul>
